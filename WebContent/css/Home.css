@@ -1,0 +1,52 @@
+body, html {
+	height: 110%;
+	margin: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div.container {
+	width: 100%;
+	height: 100%;
+}
+
+div.content {
+	width: 100%;
+	height: 20%;
+}
+
+h1 {
+	font-size: 50px
+}
+
+header {
+	background-color: #405d27;
+	color: white;
+	padding-top: 0%;
+	padding-bottom: 0%;
+	padding-top: 0%;
+}
+
+.footer {
+	font-size: 30px;
+	background-color: Peru;
+}
+
+h4 {
+	font-size: 30px;
+}
+
+.button {
+	color: white;
+	padding: 8px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 6px 2px;
+}
+
+font {
+	text-align: left;
+}

@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+input {
+	width: 95%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+button {
+	font-size: 16px;
+	background-color: #034f84;
+	padding: 8px 32px;
+	border-radius: 10px;
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+</style>
+<script src="HomePage.js"></script>
+<script src="SignUp.js"></script>
+<script src="SignIn.js"></script>
+<script src="bank.js"></script>
+<script src="bankAccountInformation.js"></script>
+<script src="BankAccountsList.js"></script>
+</head>
+<body>
+	<div ng-controller="BankController" align="center">
+		<br> <br>
+		<h2>Adding Account Details</h2>
+		<form name="BankForm"
+			style="width: 30%; background-color: #b1cbbb; border-radius: 20px;"
+			novalidate>
+			<table style="width: 100%;">
+				<br>
+				<tr>
+					<td align="center"><font size="5px">Name: </font></td>
+				</tr>
+				<tr>
+					<td align="center"><input name="userName" type="text"
+						width="100%" ng-model="userName" /><br> <br></td>
+				</tr>
+				<tr>
+					<td align="center"><font size="5px">Account no: </font></td>
+				</tr>
+				<tr>
+					<td align="center"><input name="accountno" type="number"
+						ng-model="accountno" length="50" required /><br> <br></td>
+				</tr>
+				<tr>
+					<td align="center"><font size="5px">Bank Name: </font></td>
+				</tr>
+				<tr>
+					<td align="center"><input name="bankName" type="text"
+						ng-model="bankName" length="20" required /><br> <br></td>
+				</tr>
+				<tr>
+					<td align="center"><font size="5px">Location: </font></td>
+				<tr>
+					<td align="center"><input name="Location" type="text"
+						ng-model="Location" length="20" required /><br> <br></td>
+				</tr>
+				<tr>
+					<td align="center"><div ng-controller="BankController">
+							<button type="submit" ng-disabled="BankForm.$invalid"
+								ng-click="bankDetailsInsertion()">Submit</button>
+						</div> <br> <br></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="footer" align="center">
+		<div id="displayArea" style="color: white;"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<script src="HomePage.js"></script>
+<script src="SignUp.js"></script>
+<script src="SignIn.js"></script>
+<script src="FriendsInformation.js"></script>
+<script src="FriendsDetails.js"></script>
+
+<style>
+div {
+	
+}
+
+input {
+	width: 45%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+button {
+	font-size: 16px;
+	background-color: #034f84;
+	padding: 8px 32px;
+	border-radius: 10px;
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+</style>
+</head>
+<body>
+	<div ng-controller="FriendsDetailsCtrl" align="center">
+		<br> <br> <br> <br><h2>Friends Information</h2>
+		<div style="background-color: #b1cbbb; width: 70%;">
+			<br> <br> <input type="text" ng-model="find"/><h5>(Type Name to Search)</h5>
+			<table border="0">
+				<thead>
+					<tr>
+						<th width="10%">Friend Name</th>
+						<th width="10%">Mobile Number</th>
+						<th width="10%">Birthday</th>
+						<th width="10%">Email Id</th>
+						<th width="10%">Address</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="detail in details|filter:find" align="center">
+						<td width="10%">{{detail.friendName}}</td>
+						<td width="10%">{{detail.mobile}}</td>
+						<td width="10%">{{detail.birthday}}</td>
+						<td width="10%">{{detail.email}}</td>
+						<td width="10%">{{detail.address}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<br> <br>
+		</div>
+	</div>
+</body>
+</html>

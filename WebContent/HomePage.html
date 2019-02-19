@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="HomePage.js"></script>
+<script src="SignIn.js"></script>
+<script src="SignUp.js"></script>
+<style>
+body, html {
+	height: 110%;
+	margin: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div.container {
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	font-size: 50px
+}
+
+header {
+	background-color: #405d27;
+	color: white;
+	padding-top: 0.25%;
+	padding-bottom: 0.5%;
+}
+
+.textField {
+	width: 200px;
+	height: 25px;
+}
+
+.footer {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 30px;
+}
+
+.button {
+	color: white;
+	padding: 8px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 6px 2px;
+}
+</style>
+</head>
+<body ng-app="app" background = "images/HomePageImage.jpg">
+	<div class="container">
+		<header>
+			<font size="10px"><b>Digital Diary</b></font> <a href="#!SignUp"
+				class="button" style="float: right; font-size: 25px; padding-top: 0.5%;">SignUp</a> <a href="#!LogIn"
+				style="float: right;  font-size: 25px; padding-top: 0.5%;" class="button">LogIn</a>
+		</header>
+		<div ng-view></div>
+	</div>
+</body>
+</html>

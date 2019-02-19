@@ -1,0 +1,59 @@
+<html>
+<head>
+<script src="HomePage.js"></script>
+<script src="SignUp.js"></script>
+<script src="SignIn.js"></script>
+<script src="bankAccountInformation.js"></script>
+<script src="BankAccountsList.js"></script>
+<style>
+div {
+	
+}
+
+input {
+	width: 45%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+button {
+	font-size: 16px;
+	background-color: #034f84;
+	padding: 8px 32px;
+	border-radius: 10px;
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+</style>
+</head>
+<body>
+	<div ng-controller="bankAccountsList" align="center">
+		<br> <br> <br> <br><h2>Available Bank Account Information</h2>
+		<div style="background-color: #b1cbbb; width: 70%;">
+			<br> <br> <input type="text" ng-model="find"/><h5>(Type Name to Search)</h5>
+			<table border="0">
+				<thead>
+					<tr>
+						<th width="10%">User Name</th>
+						<th width="10%">Account No</th>
+						<th width="10%">Bank Name</th>
+						<th width="10%">Location</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="detail in details|filter:find" align="center">
+						<td width="10%">{{detail.user_name}}</td>
+						<td width="10%">{{detail.account_no}}</td>
+						<td width="10%">{{detail.bank_name}}</td>
+						<td width="10%">{{detail.location}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<br> <br>
+		</div>
+	</div>
+</body>
+</html>

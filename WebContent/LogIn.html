@@ -1,0 +1,54 @@
+<html>
+<script src="HomePage.js"></script>
+<style>
+input {
+	width: 95%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+button {
+	font-size: 16px;
+	background-color: #034f84;
+	padding: 8px 32px;
+	border-radius: 10px;
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+</style>
+<div ng-controller="LogInController" align="center">
+	<br> <br> <br> <br> <br> <br> <br>
+	<h2>Login</h2>
+	<form name="UserForm" novalidate
+		style="width: 30%; background-color: #b1cbbb; border-radius: 20px;">
+		<table style="width: 100%;">
+			<tr>
+				<td align="center"><font size="5px">Enter email: </font></td>
+			</tr>
+			<tr>
+				<td align="center"><input name="email" type="email"
+					ng-model="email" length="50" required /><br> <br></td>
+			</tr>
+			<tr>
+				<td align="center"><font size="5px">Password: </font></td>
+			</tr>
+			<tr>
+				<td align="center"><input name="password" type="password"
+					ng-model="password" length="20" required /><br> <br></td>
+			</tr>
+			<tr>
+				<td align="center"><div ng-controller="UserController">
+						<button type="submit" ng-disabled="UserForm.$invalid"
+							ng-click="processSignIn()">Submit</button>
+					</div> <br> <br></td>
+			</tr>
+			<br>
+		</table>
+	</form>
+	<div class="footer" align="center">
+		<div id="displayArea" style="color: white;"></div>
+	</div>
+</div>

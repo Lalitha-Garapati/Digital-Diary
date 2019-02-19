@@ -1,0 +1,77 @@
+<html>
+<script src="HomePage.js"></script>
+<style>
+input {
+	width: 95%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+button {
+	font-size: 16px;
+	background-color: #034f84;
+	padding: 8px 32px;
+	border-radius: 10px;
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+</style>
+<div ng-controller="FriendsController" align="center">
+	<h2>Add Friend's Details</h2>
+	<form name="FriendsForm" novalidate
+		style="width: 30%; background-color: #b1cbbb; border-radius: 20px;">
+		<table style="width: 100%;">
+			<tr>
+				<td align="center"><font size="5px">Friend's Name: </font></td>
+			</tr>
+			<tr>
+				<td align="center"><input name="friendName" type="text"
+					ng-model="friendName" required /><br> <br></td>
+			</tr>
+			<tr>
+				<td align="center"><font size="5px">Friend
+						Address: </font></td>
+			</tr>
+			<tr>
+				<td align="center"><textarea name="address" ng-model="address"></textarea><br>
+					<br></td>
+			</tr>
+			<tr>
+				<td align="center"><font size="5px">Birthday: </font></td>
+			</tr>
+			<tr>
+				<td align="center"><input name="birthday" type="date"
+					ng-model="birthday" /><br> <br></td>
+			</tr>
+			<tr>
+				<td align="center"><font size="5px">Mobile Number:
+				</font></td>
+			</tr>
+			<tr>
+				<td align="center"><input name="mobile" type="number"
+					ng-model="mobile" /><br> <br></td>
+			</tr>
+			<tr>
+				<td align="center"><font size="5px">Email: </font></td>
+			</tr>
+			<tr>
+				<td align="center"><input name="email" type="email"
+					ng-model="email" /><br> <br></td>
+			</tr>
+			<tr>
+				<td align="center"><div ng-controller="FriendsController">
+						<button type="submit" ng-disabled="FriendsForm.$invalid"
+							ng-click="FriendDetailsInsertion()">Save</button>
+					</div> <br></td>
+			</tr>
+			<br>
+		</table>
+	</form>
+	<div class="footer" align="center">
+		<div id="displayArea" style="color: white;"></div>
+	</div>
+</div>
+</html>

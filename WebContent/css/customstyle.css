@@ -1,0 +1,25 @@
+a {
+	text-decoration: none;
+	color: orange;
+	font-size: 100px;
+}
+
+nav {
+	color: white;
+}
+
+a.active {
+	background-color: teal;
+	color: white;
+}
+
+li {
+	background-color: grey;
+	border-style: solid;
+	border-color: white;
+	text-color: orange;
+}
+
+.linkcustomstyle {
+	color: blank;
+}
